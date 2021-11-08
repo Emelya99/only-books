@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Only Books</title>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="wrapper">
+
+        <header class="header bg-primary-dark">
+            <nav class="navbar navbar-expand-md p-0">
+                <div class="container-xxl">
+                    <div class="navbar-content">
+                        <p class="navbar-text p-0">Calls are free of charge</p>
+                        <a class="navbar-phone" href="#">0-800-600-505</a>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <div class="navbar-toggler-icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </button>
+                    <div class="collapse navbar-collapse p-0" id="navbarMenu">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link p-0" href="#">Book Listing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link p-0" href="#">Single Book</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link p-0" href="#">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link p-0" href="#">Login</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+              </nav>
+              <div class="container-xxl">
+                  <div class="row header__wrapper">
+                      <div class="header__logo-btn d-flex justify-content-between align-items-center flex-wrap">
+                          <a href="#" class="header__logo">
+                            <img class="header__logo-img" src="img/logo.svg" alt="logo">
+                         </a>
+                         <a class="header__btn" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.09091 1H2C1.44771 1 1 1.44772 1 2V7.09091C1 7.64319 1.44772 8.09091 2 8.09091H7.09091C7.64319 8.09091 8.09091 7.64319 8.09091 7.09091V2C8.09091 1.44771 7.64319 1 7.09091 1ZM2 0C0.895431 0 0 0.89543 0 2V7.09091C0 8.19548 0.89543 9.09091 2 9.09091H7.09091C8.19548 9.09091 9.09091 8.19548 9.09091 7.09091V2C9.09091 0.895431 8.19548 0 7.09091 0H2Z"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.09091 11.9092H2C1.44771 11.9092 1 12.3569 1 12.9092V18.0001C1 18.5524 1.44772 19.0001 2 19.0001H7.09091C7.64319 19.0001 8.09091 18.5524 8.09091 18.0001V12.9092C8.09091 12.3569 7.64319 11.9092 7.09091 11.9092ZM2 10.9092C0.895431 10.9092 0 11.8046 0 12.9092V18.0001C0 19.1047 0.89543 20.0001 2 20.0001H7.09091C8.19548 20.0001 9.09091 19.1047 9.09091 18.0001V12.9092C9.09091 11.8046 8.19548 10.9092 7.09091 10.9092H2Z"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M18 11.9092H12.9091C12.3568 11.9092 11.9091 12.3569 11.9091 12.9092V18.0001C11.9091 18.5524 12.3568 19.0001 12.9091 19.0001H18C18.5523 19.0001 19 18.5524 19 18.0001V12.9092C19 12.3569 18.5523 11.9092 18 11.9092ZM12.9091 10.9092C11.8045 10.9092 10.9091 11.8046 10.9091 12.9092V18.0001C10.9091 19.1047 11.8045 20.0001 12.9091 20.0001H18C19.1046 20.0001 20 19.1047 20 18.0001V12.9092C20 11.8046 19.1046 10.9092 18 10.9092H12.9091Z"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M18 1H12.9091C12.3568 1 11.9091 1.44772 11.9091 2V7.09091C11.9091 7.64319 12.3568 8.09091 12.9091 8.09091H18C18.5523 8.09091 19 7.64319 19 7.09091V2C19 1.44771 18.5523 1 18 1ZM12.9091 0C11.8045 0 10.9091 0.89543 10.9091 2V7.09091C10.9091 8.19548 11.8045 9.09091 12.9091 9.09091H18C19.1046 9.09091 20 8.19548 20 7.09091V2C20 0.895431 19.1046 0 18 0H12.9091Z"></path>
+                              </svg>
+                            All Books</a>
+                      </div>
+                      <div class="header__content d-flex justify-content-between align-items-center">
+                        <form class="header__search d-flex w-100">
+                            <input class="header__input w-100" type="search" placeholder="I’m looking for..." aria-label="Search">
+                            <button class="header__form-btn" type="submit">Search</button>
+                            <img class="header__form-img" src="img/loop.svg" alt="icon">
+                          </form>
+                        <button class="header__wishlist">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="30" viewBox="0 0 22 30" fill="">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11 23.3333L22 30V2C22 0.895431 21.1046 0 20 0H2C0.895431 0 0 0.89543 0 2V30L11 23.3333ZM2 26.4492L11 20.9947L20 26.4492V2H2V26.4492Z"></path>
+                            </svg>
+                            <div class="header__count header__count-wishlist d-flex justify-content-center align-items-center">3</div>
+                        </button>
+                        <button class="header__cart">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="">
+                                <path d="M10.9544 21.9807H10.956L10.9599 21.9805H29.0195C29.4641 21.9805 29.8551 21.6855 29.9772 21.258L33.9616 7.31273C34.0475 7.01208 33.9873 6.68887 33.7992 6.43933C33.6109 6.18979 33.3165 6.04297 33.0039 6.04297H8.6572L7.94514 2.83861C7.84372 2.38284 7.43957 2.05859 6.97266 2.05859H0.996094C0.445908 2.05859 0 2.5045 0 3.05469C0 3.60487 0.445908 4.05078 0.996094 4.05078H6.17371C6.29977 4.61861 9.58118 19.3852 9.77002 20.2347C8.71141 20.6949 7.96875 21.7504 7.96875 22.9766C7.96875 24.6243 9.30933 25.9648 10.957 25.9648H29.0195C29.5697 25.9648 30.0156 25.5189 30.0156 24.9688C30.0156 24.4186 29.5697 23.9727 29.0195 23.9727H10.957C10.4079 23.9727 9.96094 23.5257 9.96094 22.9766C9.96094 22.4282 10.4063 21.982 10.9544 21.9807ZM31.6833 8.03516L28.268 19.9883H11.756L9.09973 8.03516H31.6833Z"></path>
+                                <path d="M9.96088 28.9531C9.96088 30.6008 11.3015 31.9414 12.9492 31.9414C14.5969 31.9414 15.9374 30.6008 15.9374 28.9531C15.9374 27.3054 14.5969 25.9648 12.9492 25.9648C11.3015 25.9648 9.96088 27.3054 9.96088 28.9531ZM12.9492 27.957C13.4983 27.957 13.9453 28.404 13.9453 28.9531C13.9453 29.5023 13.4983 29.9492 12.9492 29.9492C12.4 29.9492 11.9531 29.5023 11.9531 28.9531C11.9531 28.404 12.4 27.957 12.9492 27.957Z"></path>
+                                <path d="M24.0389 28.9531C24.0389 30.6008 25.3795 31.9414 27.0272 31.9414C28.6749 31.9414 30.0154 30.6008 30.0154 28.9531C30.0154 27.3054 28.6749 25.9648 27.0272 25.9648C25.3795 25.9648 24.0389 27.3054 24.0389 28.9531ZM27.0272 27.957C27.5763 27.957 28.0233 28.404 28.0233 28.9531C28.0233 29.5023 27.5763 29.9492 27.0272 29.9492C26.478 29.9492 26.0311 29.5023 26.0311 28.9531C26.0311 28.404 26.478 27.957 27.0272 27.957Z"></path>
+                            </svg>
+                            <div class="header__count header__count-cart d-flex justify-content-center align-items-center">4</div>
+                        </button>
+                      </div>
+                  </div>
+              </div>
+        </header>
+
+        <main class="main">
+            <div class="welcome bg-secondary-light">
+                <div class="container-xxl">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4 col-sm12">
+                            <div class="dropdown-group btn-group dropend flex-column w-100 h-100 p-0">
+                                <button class="dropdown-btn dropdown-toggle text-start h3" type="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                    Books
+                                </button>
+                                <button class="dropdown-btn text-start h3" type="button" aria-expanded="false">
+                                    Popular
+                                  </button>
+                                  <button class="dropdown-btn text-start h3" type="button" aria-expanded="false">
+                                    Sale
+                                  </button>
+                                  <button class="dropdown-btn text-start h3" type="button" aria-expanded="false">
+                                    New
+                                  </button>
+                                <div class="dropdown-menu">
+                                  <div class="row d-flex justify-content-between">
+                                      <div class="dropdown-menu__start">
+                                        <ul class="dropdown-menu__list">
+                                            <li class="dropdown-menu__item list-unstyled">
+                                                <a class="dropdown-menu__link" href="#">Arts & Photography</a>
+                                            </li>
+                                            <li class="dropdown-menu__item list-unstyled">
+                                                <a class="dropdown-menu__link" href="#">Biographies & Memoirs</a>
+                                            </li>
+                                            <li class="dropdown-menu__item list-unstyled">
+                                                <a class="dropdown-menu__link" href="#">Business & Money</a>
+                                            </li>
+                                            <li class="dropdown-menu__item list-unstyled">
+                                                <a class="dropdown-menu__link" href="#">Children's Books</a>
+                                            </li>
+                                            <li class="dropdown-menu__item list-unstyled ">
+                                                <a class="dropdown-menu__link" href="#">Comics & Graphic Novels</a>
+                                            </li>
+                                            <li class="dropdown-menu__item list-unstyled">
+                                                <a class="dropdown-menu__link" href="#">Computers & Technology</a>
+                                            </li>
+                                            <li class="dropdown-menu__item list-unstyled">
+                                                <a class="dropdown-menu__link" href="#">Cookbooks, Food & Wine</a>
+                                            </li>
+                                            <li class="dropdown-menu__item list-unstyled">
+                                                <a class="dropdown-menu__link" href="#">Crafts, Hobbies & Home</a>
+                                            </li>
+                                            <li class="dropdown-menu__item list-unstyled">
+                                                <a class="dropdown-menu__link" href="#">Education & Teaching</a>
+                                            </li>
+                                            <li class="dropdown-menu__item list-unstyled">
+                                                <a class="dropdown-menu__link" href="#">Engineering & Transportation</a>
+                                            </li>
+                                            <li class="dropdown-menu__item list-unstyled">
+                                                <a class="dropdown-menu__link" href="#">Health, Fitness & Dieting</a>
+                                            </li>
+                                            <li class="dropdown-menu__item list-unstyled">
+                                                <a class="dropdown-menu__link" href="#">History</a>
+                                            </li>
+                                        </ul>
+                                      </div>
+                                      <div class="dropdown-menu__middle">
+                                        <ul class="dropdown-menu__list">
+                                            <li class="dropdown-menu__item list-unstyled">
+                                                <a class="dropdown-menu__link" href="#">Literature & Fiction</a>
+                                            </li>
+                                            <li class="dropdown-menu__item list-unstyled">
+                                                <a class="dropdown-menu__link" href="#">Medical Books</a>
+                                            </li>
+                                            <li class="dropdown-menu__item list-unstyled">
+                                                <a class="dropdown-menu__link" href="#">Mystery, Thriller & Suspense</a>
+                                            </li>
+                                            <li class="dropdown-menu__item list-unstyled">
+                                                <a class="dropdown-menu__link" href="#">Parenting & Relationships</a>
+                                            </li>
+                                            <li class="dropdown-menu__item list-unstyled ">
+                                                <a class="dropdown-menu__link" href="#">Politics & Social Sciences</a>
+                                            </li>
+                                            <li class="dropdown-menu__item list-unstyled">
+                                                <a class="dropdown-menu__link" href="#">Religion & Spirituality</a>
+                                            </li>
+                                            <li class="dropdown-menu__item list-unstyled">
+                                                <a class="dropdown-menu__link" href="#">Romance</a>
+                                            </li>
+                                            <li class="dropdown-menu__item list-unstyled">
+                                                <a class="dropdown-menu__link" href="#">Science & Math</a>
+                                            </li>
+                                            <li class="dropdown-menu__item list-unstyled">
+                                                <a class="dropdown-menu__link" href="#">Science Fiction & Fantasy</a>
+                                            </li>
+                                            <li class="dropdown-menu__item list-unstyled">
+                                                <a class="dropdown-menu__link" href="#">Travel</a>
+                                            </li>
+                                        </ul>
+                                        <a class="dropdown-menu__middle-btn" href="#">All Genres</a>
+                                    </div>
+                                    <div class="dropdown-menu__end">
+                                        <h2 class="dropdown-menu__end-title">
+                                            Personal Transformations
+                                        </h2>
+                                        <ul class="dropdown-menu__list dropdown-menu__end-list">
+                                            <li class="dropdown-menu__item list-unstyled">
+                                                <a class="dropdown-menu__link" href="#">Motivation</a>
+                                            </li>
+                                            <li class="dropdown-menu__item list-unstyled">
+                                                <a class="dropdown-menu__link" href="#">Self-Development</a>
+                                            </li>
+                                        </ul>
+                                        <h2 class="dropdown-menu__end-title">
+                                            Learning Languages 
+                                        </h2>
+                                        <ul class="dropdown-menu__list dropdown-menu__end-list">
+                                            <li class="dropdown-menu__item list-unstyled">
+                                                <a class="dropdown-menu__link" href="#">Education & Teaching</a>
+                                            </li>
+                                            <li class="dropdown-menu__item list-unstyled">
+                                                <a class="dropdown-menu__link" href="#">Foreign Language Instruction</a>
+                                            </li>
+                                        </ul>
+                                        <ul class="dropdawn-menu__hot">
+                                            <li class="dropdawn-menu__hot-item list-unstyled">
+                                                <a class="dropdawn-menu__hot-link" href="#">Sale</a>
+                                            </li>
+                                            <li class="dropdawn-menu__hot-item list-unstyled">
+                                                <a class="dropdawn-menu__hot-link" href="#">Popular</a>
+                                            </li>
+                                            <li class="dropdawn-menu__hot-item list-unstyled">
+                                                <a class="dropdawn-menu__hot-link" href="#">New</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="col-lg-9 col-md-8 col-sm-12">
+                            <div class="carousel slide"  id="carouselExampleCaptions" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active">
+                                    <img src="./img/banner.png" class="d-block w-100" alt="image">
+                                    <div class="carousel-caption d-flex flex-column">
+                                      <p class="carousel-caption__text">Limited-time deal</p>
+                                      <h1 class="carousel-caption__title h1 text-white">Save up to 40% on print books</h1>
+                                    </div>
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="./img/banner.png" class="d-block w-100" alt="image">
+                                    <div class="carousel-caption d-flex flex-column">
+                                      <p class="carousel-caption__text">Limited-time deal</p>
+                                      <h1 class="carousel-caption__title h1 text-white">Save up to 40% on print books</h1>
+                                    </div>
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="./img/banner.png" class="d-block w-100" alt="image">
+                                    <div class="carousel-caption d-flex flex-column">
+                                      <p class="carousel-caption__text">Limited-time deal</p>
+                                      <h1 class="carousel-caption__title h1 text-white">Save up to 40% on print books</h1>
+                                    </div>
+                                  </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Next</span>
+                                </button>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="products products-best section-primary section-overflow">
+                <div class="container-xxl">
+                    <h2 class="products__title h2">Best Sellers</h2>
+                    <div class="products__slider">
+                        <div class="products__item">
+                            <a class="products__link d-block" href="#">
+                                <img class="products__img" src="./img/products-1.jpg" alt="image">
+                            </a>
+                            <a class="products__product-title d-block h4" href="#">One Vote Away</a>
+                            <p class="products__description">Ted Cruz</p>
+                            <div class="products__price-rating d-flex justify-content-between align-items-center flex-wrap">
+                                <p class="products__price price">
+                                    $17.39
+                                </p>
+                                <div class="products__star">
+                                    <div class="products__star-rating">
+                                        <span class="active"></span>
+                                        <span class="active"></span>
+                                        <span class="active"></span>
+                                        <span class="active"></span>
+                                        <span></span>
+                                      </div>
+                                </div>
+                            </div>
+                            <div class="products__bottom">
+                                <a class="products__btn btn btn-main" href="#">Add to Cart</a>
+                                <button class="products__wishlist">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="18" viewBox="0 0 14 18" fill="">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7 14L14 18V2C14 0.895431 13.1046 0 12 0H2C0.895431 0 0 0.89543 0 2V18L7 14ZM1 16.2768L7 12.8482L13 16.2768V2C13 1.44772 12.5523 1 12 1H2C1.44772 1 1 1.44772 1 2V16.2768Z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="products__badge popular">Popular</div>
+                        </div>
+                        <div class="products__item">
+                            <a class="products__link d-block" href="#">
+                                <img class="products__img" src="./img/products-2.jpg" alt="image">
+                            </a>
+                            <a class="products__product-title d-block h4" href="#">7 Secrets of Persuasion </a>
+                            <p class="products__description">Ina Garten</p>
+                            <div class="products__price-rating d-flex justify-content-between align-items-center flex-wrap">
+                                <p class="products__price price">
+                                    $12.00
+                                </p>
+                                <div class="products__star">
+                                    <div class="products__star-rating">
+                                        <span class="active"></span>
+                                        <span class="active"></span>
+                                        <span class="active"></span>
+                                        <span class="active"></span>
+                                        <span></span>
+                                      </div>
+                                </div>
+                            </div>
+                            <div class="products__bottom">
+                                <a class="products__btn btn btn-main" href="#">Add to Cart</a>
+                                <button class="products__wishlist">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="18" viewBox="0 0 14 18" fill="">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7 14L14 18V2C14 0.895431 13.1046 0 12 0H2C0.895431 0 0 0.89543 0 2V18L7 14ZM1 16.2768L7 12.8482L13 16.2768V2C13 1.44772 12.5523 1 12 1H2C1.44772 1 1 1.44772 1 2V16.2768Z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="products__badge popular">Popular</div>
+                        </div>
+                        <div class="products__item">
+                            <a class="products__link d-block" href="#">
+                                <img class="products__img" src="./img/products-3.jpg" alt="image">
+                            </a>
+                            <a class="products__product-title d-block h4" href="#">American Dirt</a>
+                            <p class="products__description">Jeanine Cummins</p>
+                            <div class="products__price-rating d-flex justify-content-between align-items-center flex-wrap">
+                                <p class="products__price price">
+                                    $16.00
+                                </p>
+                                <div class="products__star">
+                                    <div class="products__star-rating">
+                                        <span class="active"></span>
+                                        <span class="active"></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                      </div>
+                                </div>
+                            </div>
+                            <div class="products__bottom">
+                                <a class="products__btn btn btn-main" href="#">Add to Cart</a>
+                                <button class="products__wishlist">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="18" viewBox="0 0 14 18" fill="">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7 14L14 18V2C14 0.895431 13.1046 0 12 0H2C0.895431 0 0 0.89543 0 2V18L7 14ZM1 16.2768L7 12.8482L13 16.2768V2C13 1.44772 12.5523 1 12 1H2C1.44772 1 1 1.44772 1 2V16.2768Z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="products__badge popular">Popular</div>
+                        </div>
+                        <div class="products__item">
+                            <a class="products__link d-block" href="#">
+                                <img class="products__img" src="./img/products-4.jpg" alt="image">
+                            </a>
+                            <a class="products__product-title d-block h4" href="#">Surviving The Forest</a>
+                            <p class="products__description">Adiva Geffen</p>
+                            <div class="products__price-rating d-flex justify-content-between align-items-center flex-wrap">
+                                <p class="products__price price">
+                                    $22.99
+                                </p>
+                                <div class="products__star">
+                                    <div class="products__star-rating">
+                                        <span class="active"></span>
+                                        <span class="active"></span>
+                                        <span class="active"></span>
+                                        <span class="active"></span>
+                                        <span></span>
+                                      </div>
+                                </div>
+                            </div>
+                            <div class="products__bottom">
+                                <a class="products__btn btn btn-main" href="#">Add to Cart</a>
+                                <button class="products__wishlist">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="18" viewBox="0 0 14 18" fill="">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7 14L14 18V2C14 0.895431 13.1046 0 12 0H2C0.895431 0 0 0.89543 0 2V18L7 14ZM1 16.2768L7 12.8482L13 16.2768V2C13 1.44772 12.5523 1 12 1H2C1.44772 1 1 1.44772 1 2V16.2768Z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="products__badge popular">Popular</div>
+                        </div>
+                        <div class="products__item">
+                            <a class="products__link d-block" href="#">
+                                <img class="products__img" src="./img/products-5.jpg" alt="image">
+                            </a>
+                            <a class="products__product-title d-block h4" href="#">The Secrets We Keep</a>
+                            <p class="products__description">Kate Hewitt</p>
+                            <div class="products__price-rating d-flex justify-content-between align-items-center flex-wrap">
+                                <p class="products__price price">
+                                    $10.50
+                                </p>
+                                <div class="products__star">
+                                    <div class="products__star-rating">
+                                        <span class="active"></span>
+                                        <span class="active"></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                      </div>
+                                </div>
+                            </div>
+                            <div class="products__bottom">
+                                <a class="products__btn btn btn-main" href="#">Add to Cart</a>
+                                <button class="products__wishlist">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="18" viewBox="0 0 14 18" fill="">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7 14L14 18V2C14 0.895431 13.1046 0 12 0H2C0.895431 0 0 0.89543 0 2V18L7 14ZM1 16.2768L7 12.8482L13 16.2768V2C13 1.44772 12.5523 1 12 1H2C1.44772 1 1 1.44772 1 2V16.2768Z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="products__badge popular">Popular</div>
+                        </div>
+                        <div class="products__item">
+                            <a class="products__link d-block" href="#">
+                                <img class="products__img" src="./img/products-10.jpg" alt="image">
+                            </a>
+                            <a class="products__product-title d-block h4" href="#">7 Secrets of Persuasion </a>
+                            <p class="products__description">Kristin Cavallari</p>
+                            <div class="products__price-rating d-flex justify-content-between align-items-center flex-wrap">
+                                <p class="products__price price">
+                                    $17.52
+                                </p>
+                                <div class="products__star">
+                                    <div class="products__star-rating">
+                                        <span class="active"></span>
+                                        <span class="active"></span>
+                                        <span class="active"></span>
+                                        <span class="active"></span>
+                                        <span></span>
+                                      </div>
+                                </div>
+                            </div>
+                            <div class="products__bottom">
+                                <a class="products__btn btn btn-main" href="#">Add to Cart</a>
+                                <button class="products__wishlist">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="18" viewBox="0 0 14 18" fill="">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7 14L14 18V2C14 0.895431 13.1046 0 12 0H2C0.895431 0 0 0.89543 0 2V18L7 14ZM1 16.2768L7 12.8482L13 16.2768V2C13 1.44772 12.5523 1 12 1H2C1.44772 1 1 1.44772 1 2V16.2768Z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="products__badge popular">Popular</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="products section-secondary section-overflow">
+                <div class="container-xxl">
+                    <h2 class="products__title h2">Hot New Releases</h2>
+                    <div class="products__slider">
+                        <div class="products__item">
+                            <a class="products__link d-block" href="#">
+                                <img class="products__img" src="./img/products-6.jpg" alt="image">
+                            </a>
+                            <a class="products__product-title d-block h4" href="#">The Dip</a>
+                            <p class="products__description">Seth Godin</p>
+                            <div class="products__price-rating d-flex justify-content-between align-items-center flex-wrap">
+                                <p class="products__price price">
+                                    $17.00
+                                </p>
+                                <div class="products__star">
+                                    <div class="products__star-rating">
+                                        <span class="active"></span>
+                                        <span class="active"></span>
+                                        <span class="active"></span>
+                                        <span class="active"></span>
+                                        <span></span>
+                                      </div>
+                                </div>
+                            </div>
+                            <div class="products__bottom">
+                                <a class="products__btn btn btn-main" href="#">Add to Cart</a>
+                                <button class="products__wishlist">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="18" viewBox="0 0 14 18" fill="">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7 14L14 18V2C14 0.895431 13.1046 0 12 0H2C0.895431 0 0 0.89543 0 2V18L7 14ZM1 16.2768L7 12.8482L13 16.2768V2C13 1.44772 12.5523 1 12 1H2C1.44772 1 1 1.44772 1 2V16.2768Z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="products__badge new">New</div>
+                        </div>
+                        <div class="products__item">
+                            <a class="products__link d-block" href="#">
+                                <img class="products__img" src="./img/products-7.jpg" alt="image">
+                            </a>
+                            <a class="products__product-title d-block h4" href="#">A Promised Land </a>
+                            <p class="products__description">Barack Obama</p>
+                            <div class="products__price-rating d-flex justify-content-between align-items-center flex-wrap">
+                                <p class="products__price price">
+                                    $27.00
+                                </p>
+                                <div class="products__star">
+                                    <div class="products__star-rating">
+                                        <span class="active"></span>
+                                        <span class="active"></span>
+                                        <span class="active"></span>
+                                        <span class="active"></span>
+                                        <span></span>
+                                      </div>
+                                </div>
+                            </div>
+                            <div class="products__bottom">
+                                <a class="products__btn btn btn-main" href="#">Add to Cart</a>
+                                <button class="products__wishlist">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="18" viewBox="0 0 14 18" fill="">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7 14L14 18V2C14 0.895431 13.1046 0 12 0H2C0.895431 0 0 0.89543 0 2V18L7 14ZM1 16.2768L7 12.8482L13 16.2768V2C13 1.44772 12.5523 1 12 1H2C1.44772 1 1 1.44772 1 2V16.2768Z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="products__badge new">New</div>
+                        </div>
+                        <div class="products__item">
+                            <a class="products__link d-block" href="#">
+                                <img class="products__img" src="./img/products-8.jpg" alt="image">
+                            </a>
+                            <a class="products__product-title d-block h4" href="#">The Office</a>
+                            <p class="products__description">Robb Pearlman</p>
+                            <div class="products__price-rating d-flex justify-content-between align-items-center flex-wrap">
+                                <p class="products__price price">
+                                    $12.00
+                                </p>
+                                <div class="products__star">
+                                    <div class="products__star-rating">
+                                        <span class="active"></span>
+                                        <span class="active"></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                      </div>
+                                </div>
+                            </div>
+                            <div class="products__bottom">
+                                <a class="products__btn btn btn-main" href="#">Add to Cart</a>
+                                <button class="products__wishlist">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="18" viewBox="0 0 14 18" fill="">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7 14L14 18V2C14 0.895431 13.1046 0 12 0H2C0.895431 0 0 0.89543 0 2V18L7 14ZM1 16.2768L7 12.8482L13 16.2768V2C13 1.44772 12.5523 1 12 1H2C1.44772 1 1 1.44772 1 2V16.2768Z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="products__badge new">New</div>
+                        </div>
+                        <div class="products__item">
+                            <a class="products__link d-block" href="#">
+                                <img class="products__img" src="./img/products-9.jpg" alt="image">
+                            </a>
+                            <a class="products__product-title d-block h4" href="#">The Return </a>
+                            <p class="products__description">Nicholas Sparks</p>
+                            <div class="products__price-rating d-flex justify-content-between align-items-center flex-wrap">
+                                <p class="products__price price">
+                                    $16.00
+                                </p>
+                                <div class="products__star">
+                                    <div class="products__star-rating">
+                                        <span class="active"></span>
+                                        <span class="active"></span>
+                                        <span class="active"></span>
+                                        <span class="active"></span>
+                                        <span></span>
+                                      </div>
+                                </div>
+                            </div>
+                            <div class="products__bottom">
+                                <a class="products__btn btn btn-main" href="#">Add to Cart</a>
+                                <button class="products__wishlist">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="18" viewBox="0 0 14 18" fill="">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7 14L14 18V2C14 0.895431 13.1046 0 12 0H2C0.895431 0 0 0.89543 0 2V18L7 14ZM1 16.2768L7 12.8482L13 16.2768V2C13 1.44772 12.5523 1 12 1H2C1.44772 1 1 1.44772 1 2V16.2768Z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="products__badge new">New</div>
+                        </div>
+                        <div class="products__item">
+                            <a class="products__link d-block" href="#">
+                                <img class="products__img" src="./img/products-10.jpg" alt="image">
+                            </a>
+                            <a class="products__product-title d-block h4" href="#">7 Secrets of Persuasion </a>
+                            <p class="products__description">Kristin Cavallari </p>
+                            <div class="products__price-rating d-flex justify-content-between align-items-center flex-wrap">
+                                <p class="products__price price">
+                                    $17.52
+                                </p>
+                                <div class="products__star">
+                                    <div class="products__star-rating">
+                                        <span class="active"></span>
+                                        <span class="active"></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                      </div>
+                                </div>
+                            </div>
+                            <div class="products__bottom">
+                                <a class="products__btn btn btn-main" href="#">Add to Cart</a>
+                                <button class="products__wishlist">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="18" viewBox="0 0 14 18" fill="">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7 14L14 18V2C14 0.895431 13.1046 0 12 0H2C0.895431 0 0 0.89543 0 2V18L7 14ZM1 16.2768L7 12.8482L13 16.2768V2C13 1.44772 12.5523 1 12 1H2C1.44772 1 1 1.44772 1 2V16.2768Z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="products__badge new">New</div>
+                        </div>
+                        <div class="products__item">
+                            <a class="products__link d-block" href="#">
+                                <img class="products__img" src="./img/products-4.jpg" alt="image">
+                            </a>
+                            <a class="products__product-title d-block h4" href="#">Surviving The Forest</a>
+                            <p class="products__description">Adiva Geffen</p> 
+                            <div class="products__price-rating d-flex justify-content-between align-items-center flex-wrap">
+                                <p class="products__price price">
+                                    $22.99
+                                </p>
+                                <div class="products__star">
+                                    <div class="products__star-rating">
+                                        <span class="active"></span>
+                                        <span class="active"></span>
+                                        <span class="active"></span>
+                                        <span class="active"></span>
+                                        <span></span>
+                                      </div>
+                                </div>
+                            </div>
+                            <div class="products__bottom">
+                                <a class="products__btn btn btn-main" href="#">Add to Cart</a>
+                                <button class="products__wishlist">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="18" viewBox="0 0 14 18" fill="">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7 14L14 18V2C14 0.895431 13.1046 0 12 0H2C0.895431 0 0 0.89543 0 2V18L7 14ZM1 16.2768L7 12.8482L13 16.2768V2C13 1.44772 12.5523 1 12 1H2C1.44772 1 1 1.44772 1 2V16.2768Z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="products__badge new">New</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="book-week">
+                <div class="container-xxl">
+                    <div class="book-week__wrapper">
+                        <div class="book-week__content">
+                            <div class="book-week__badge">
+                                <p class="book-week__badge-text h3 text-white">
+                                    Book of the Week
+                                </p>
+                            </div>
+                            <h2 class="book-week__title text-white">
+                                Elsewhere
+                            </h2>
+                            <p class="book-week__description h4">
+                                by Dean Koontz
+                            </p>
+                            <p class="book-week__price">
+                                $18.99
+                            </p>
+                            <p class="book-week__text">
+                                The fate of the world is in the hands of a father and daughter in an epic novel of wonder and terror by Dean Koontz, the #1 New York Times bestselling master of suspense.
+                            </p>
+                            <a class="book-week__btn btn btn-main" href="#">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="best-book section-primary section-overflow">
+                <div class="container-xxl">
+                    <h2 class="best-book__title h2">
+                        The Best Books of 2020
+                    </h2>
+                    <div class="best-book__wrapper d-flex align-items-start">
+                        <div class="best-book__tabs nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                          <button class="best-book__item nav-link text-start h3 active" id="v-pills-paper-books-tab" data-bs-toggle="pill" data-bs-target="#v-pills-paper-books" type="button" role="tab" aria-controls="v-pills-paper-books" aria-selected="true">Paper Books</button>
+                          <button class="best-book__item nav-link text-start h3" id="v-pills-e-books-tab" data-bs-toggle="pill" data-bs-target="#v-pills-e-books" type="button" role="tab" aria-controls="v-pills-e-books" aria-selected="false">E-Books</button>
+                          <button class="best-book__item nav-link text-start h3" id="v-pills-audio-books-tab" data-bs-toggle="pill" data-bs-target="#v-pills-audio-books" type="button" role="tab" aria-controls="v-pills-audio-books" aria-selected="false">Audio Books</button>
+                        </div>
+                        <div class="best-book__content tab-content" id="v-pills-tabContent">
+                          <div class="tab-pane fade show active" id="v-pills-paper-books" role="tabpanel" aria-labelledby="v-pills-paper-books-tab">
+                            <div class="best-book__inner d-flex flex-wrap">
+                                <div class="best-book__box">
+                                    <a class="best-book__link d-block" href="#">
+                                        <img src="./img/tabs-1.jpg" alt="image">
+                                    </a>
+                                    <a class="best-book__box-title h4 d-block">The Dancing Girls</a>
+                                    <p class="best-book__box-text">M.M. Chouinard</p>
+                                    <p class="best-book__box-price">$13.00</p>
+                                </div>
+                                <div class="best-book__box">
+                                    <a class="best-book__link d-block" href="#">
+                                        <img src="./img/tabs-2.jpg" alt="image">
+                                    </a>
+                                    <a class="best-book__box-title h4 d-block">Zombies’ Day</a>
+                                    <p class="best-book__box-text">PopularMMOs</p>
+                                    <p class="best-book__box-price">$13.00</p>
+                                </div>
+                                <div class="best-book__box">
+                                    <a class="best-book__link d-block" href="#">
+                                        <img src="./img/tabs-3.jpg" alt="image">
+                                    </a>
+                                    <a class="best-book__box-title h4 d-block">The Calculating Stars</a>
+                                    <p class="best-book__box-text">Mary Robinette Kowal</p>
+                                    <p class="best-book__box-price">$12.79</p>
+                                </div>
+                                <div class="best-book__box">
+                                    <a class="best-book__link d-block" href="#">
+                                        <img src="./img/tabs-4.jpg" alt="image">
+                                    </a>
+                                    <a class="best-book__box-title h4 d-block">The Obelisk Gate</a>
+                                    <p class="best-book__box-text">N. K. Jemisin</p>
+                                    <p class="best-book__box-price">$13.00</p>
+                                </div>
+                                <div class="best-book__box">
+                                    <a class="best-book__link d-block" href="#">
+                                        <img src="./img/tabs-5.jpg" alt="image">
+                                    </a>
+                                    <a class="best-book__box-title h4 d-block">Where the Forest Meets...</a>
+                                    <p class="best-book__box-text">Glendy Vanderah</p>
+                                    <p class="best-book__box-price">$15.99</p>
+                                </div>
+                                <div class="best-book__box">
+                                    <a class="best-book__link d-block" href="#">
+                                        <img src="./img/tabs-6.jpg" alt="image">
+                                    </a>
+                                    <a class="best-book__box-title h4 d-block">Without a Summer </a>
+                                    <p class="best-book__box-text">Mary Robinette Kowal </p>
+                                    <p class="best-book__box-price">$13.00</p>
+                                </div>
+                                <div class="best-book__box">
+                                    <a class="best-book__link d-block" href="#">
+                                        <img src="./img/tabs-7.jpg" alt="image">
+                                    </a>
+                                    <a class="best-book__box-title h4 d-block">It All Comes Back to You</a>
+                                    <p class="best-book__box-text">Beth Duke </p>
+                                    <p class="best-book__box-price">$13.32</p>
+                                </div>
+                                <div class="best-book__box">
+                                    <a class="best-book__link d-block" href="#">
+                                        <img src="./img/tabs-8.jpg" alt="image">
+                                    </a>
+                                    <a class="best-book__box-title h4 d-block">We Were the Lucky Ones</a>
+                                    <p class="best-book__box-text">Georgia Hunter</p>
+                                    <p class="best-book__box-price">$9.60</p>
+                                </div>
+                                <div class="best-book__box">
+                                    <a class="best-book__link d-block" href="#">
+                                        <img src="./img/tabs-9.jpg" alt="image">
+                                    </a>
+                                    <a class="best-book__box-title h4 d-block">It's Not Supposed to...</a>
+                                    <p class="best-book__box-text">Lysa TerKeurst </p>
+                                    <p class="best-book__box-price">$12.50</p>
+                                </div>
+                                <div class="best-book__box">
+                                    <a class="best-book__link d-block" href="#">
+                                        <img src="./img/tabs-10.jpg" alt="image">
+                                    </a>
+                                    <a class="best-book__box-title h4 d-block">Everything Is F*cked</a>
+                                    <p class="best-book__box-text">Mark Manson</p>
+                                    <p class="best-book__box-price">$13.00</p>
+                                </div>
+                            </div>
+                            </div>
+                          <div class="tab-pane fade" id="v-pills-e-books" role="tabpanel" aria-labelledby="v-pills-e-books-tab">
+                            <div class="best-book__inner d-flex flex-wrap">
+                                <div class="best-book__box">
+                                    <a class="best-book__link d-block" href="#">
+                                        <img src="./img/tabs-1.jpg" alt="image">
+                                    </a>
+                                    <a class="best-book__box-title h4 d-block">The Dancing Girls</a>
+                                    <p class="best-book__box-text">M.M. Chouinard</p>
+                                    <p class="best-book__box-price">$13.00</p>
+                                </div>
+                                <div class="best-book__box">
+                                    <a class="best-book__link d-block" href="#">
+                                        <img src="./img/tabs-2.jpg" alt="image">
+                                    </a>
+                                    <a class="best-book__box-title h4 d-block">Zombies’ Day</a>
+                                    <p class="best-book__box-text">PopularMMOs</p>
+                                    <p class="best-book__box-price">$13.00</p>
+                                </div>
+                                <div class="best-book__box">
+                                    <a class="best-book__link d-block" href="#">
+                                        <img src="./img/tabs-3.jpg" alt="image">
+                                    </a>
+                                    <a class="best-book__box-title h4 d-block">The Calculating Stars</a>
+                                    <p class="best-book__box-text">Mary Robinette Kowal</p>
+                                    <p class="best-book__box-price">$12.79</p>
+                                </div>
+                                <div class="best-book__box">
+                                    <a class="best-book__link d-block" href="#">
+                                        <img src="./img/tabs-4.jpg" alt="image">
+                                    </a>
+                                    <a class="best-book__box-title h4 d-block">The Obelisk Gate</a>
+                                    <p class="best-book__box-text">N. K. Jemisin</p>
+                                    <p class="best-book__box-price">$13.00</p>
+                                </div>
+                                <div class="best-book__box">
+                                    <a class="best-book__link d-block" href="#">
+                                        <img src="./img/tabs-5.jpg" alt="image">
+                                    </a>
+                                    <a class="best-book__box-title h4 d-block">Where the Forest Meets...</a>
+                                    <p class="best-book__box-text">Glendy Vanderah</p>
+                                    <p class="best-book__box-price">$15.99</p>
+                                </div>
+                                <div class="best-book__box">
+                                    <a class="best-book__link d-block" href="#">
+                                        <img src="./img/tabs-6.jpg" alt="image">
+                                    </a>
+                                    <a class="best-book__box-title h4 d-block">Without a Summer </a>
+                                    <p class="best-book__box-text">Mary Robinette Kowal </p>
+                                    <p class="best-book__box-price">$13.00</p>
+                                </div>
+                                <div class="best-book__box">
+                                    <a class="best-book__link d-block" href="#">
+                                        <img src="./img/tabs-7.jpg" alt="image">
+                                    </a>
+                                    <a class="best-book__box-title h4 d-block">It All Comes Back to You</a>
+                                    <p class="best-book__box-text">Beth Duke </p>
+                                    <p class="best-book__box-price">$13.32</p>
+                                </div>
+                                <div class="best-book__box">
+                                    <a class="best-book__link d-block" href="#">
+                                        <img src="./img/tabs-8.jpg" alt="image">
+                                    </a>
+                                    <a class="best-book__box-title h4 d-block">We Were the Lucky Ones</a>
+                                    <p class="best-book__box-text">Georgia Hunter</p>
+                                    <p class="best-book__box-price">$9.60</p>
+                                </div>
+                                <div class="best-book__box">
+                                    <a class="best-book__link d-block" href="#">
+                                        <img src="./img/tabs-9.jpg" alt="image">
+                                    </a>
+                                    <a class="best-book__box-title h4 d-block">It's Not Supposed to...</a>
+                                    <p class="best-book__box-text">Lysa TerKeurst </p>
+                                    <p class="best-book__box-price">$12.50</p>
+                                </div>
+                                <div class="best-book__box">
+                                    <a class="best-book__link d-block" href="#">
+                                        <img src="./img/tabs-10.jpg" alt="image">
+                                    </a>
+                                    <a class="best-book__box-title h4 d-block">Everything Is F*cked</a>
+                                    <p class="best-book__box-text">Mark Manson</p>
+                                    <p class="best-book__box-price">$13.00</p>
+                                </div>
+                            </div>
+                            </div>
+                          <div class="tab-pane fade" id="v-pills-audio-books" role="tabpanel" aria-labelledby="v-pills-audio-books-tab">
+                            <div class="best-book__inner d-flex flex-wrap">
+                                <div class="best-book__box">
+                                    <a class="best-book__link d-block" href="#">
+                                        <img src="./img/tabs-1.jpg" alt="image">
+                                    </a>
+                                    <a class="best-book__box-title h4 d-block">The Dancing Girls</a>
+                                    <p class="best-book__box-text">M.M. Chouinard</p>
+                                    <p class="best-book__box-price">$13.00</p>
+                                </div>
+                                <div class="best-book__box">
+                                    <a class="best-book__link d-block" href="#">
+                                        <img src="./img/tabs-2.jpg" alt="image">
+                                    </a>
+                                    <a class="best-book__box-title h4 d-block">Zombies’ Day</a>
+                                    <p class="best-book__box-text">PopularMMOs</p>
+                                    <p class="best-book__box-price">$13.00</p>
+                                </div>
+                                <div class="best-book__box">
+                                    <a class="best-book__link d-block" href="#">
+                                        <img src="./img/tabs-3.jpg" alt="image">
+                                    </a>
+                                    <a class="best-book__box-title h4 d-block">The Calculating Stars</a>
+                                    <p class="best-book__box-text">Mary Robinette Kowal</p>
+                                    <p class="best-book__box-price">$12.79</p>
+                                </div>
+                                <div class="best-book__box">
+                                    <a class="best-book__link d-block" href="#">
+                                        <img src="./img/tabs-4.jpg" alt="image">
+                                    </a>
+                                    <a class="best-book__box-title h4 d-block">The Obelisk Gate</a>
+                                    <p class="best-book__box-text">N. K. Jemisin</p>
+                                    <p class="best-book__box-price">$13.00</p>
+                                </div>
+                                <div class="best-book__box">
+                                    <a class="best-book__link d-block" href="#">
+                                        <img src="./img/tabs-5.jpg" alt="image">
+                                    </a>
+                                    <a class="best-book__box-title h4 d-block">Where the Forest Meets...</a>
+                                    <p class="best-book__box-text">Glendy Vanderah</p>
+                                    <p class="best-book__box-price">$15.99</p>
+                                </div>
+                                <div class="best-book__box">
+                                    <a class="best-book__link d-block" href="#">
+                                        <img src="./img/tabs-6.jpg" alt="image">
+                                    </a>
+                                    <a class="best-book__box-title h4 d-block">Without a Summer </a>
+                                    <p class="best-book__box-text">Mary Robinette Kowal </p>
+                                    <p class="best-book__box-price">$13.00</p>
+                                </div>
+                                <div class="best-book__box">
+                                    <a class="best-book__link d-block" href="#">
+                                        <img src="./img/tabs-7.jpg" alt="image">
+                                    </a>
+                                    <a class="best-book__box-title h4 d-block">It All Comes Back to You</a>
+                                    <p class="best-book__box-text">Beth Duke </p>
+                                    <p class="best-book__box-price">$13.32</p>
+                                </div>
+                                <div class="best-book__box">
+                                    <a class="best-book__link d-block" href="#">
+                                        <img src="./img/tabs-8.jpg" alt="image">
+                                    </a>
+                                    <a class="best-book__box-title h4 d-block">We Were the Lucky Ones</a>
+                                    <p class="best-book__box-text">Georgia Hunter</p>
+                                    <p class="best-book__box-price">$9.60</p>
+                                </div>
+                                <div class="best-book__box">
+                                    <a class="best-book__link d-block" href="#">
+                                        <img src="./img/tabs-9.jpg" alt="image">
+                                    </a>
+                                    <a class="best-book__box-title h4 d-block">It's Not Supposed to...</a>
+                                    <p class="best-book__box-text">Lysa TerKeurst </p>
+                                    <p class="best-book__box-price">$12.50</p>
+                                </div>
+                                <div class="best-book__box">
+                                    <a class="best-book__link d-block" href="#">
+                                        <img src="./img/tabs-10.jpg" alt="image">
+                                    </a>
+                                    <a class="best-book__box-title h4 d-block">Everything Is F*cked</a>
+                                    <p class="best-book__box-text">Mark Manson</p>
+                                    <p class="best-book__box-price">$13.00</p>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+            </section>
+
+            <section class="news section-primary bg-secondary-light">
+                <div class="container-xxl">
+                    <div class="news__wrapper row">
+                        <div class="col-sm-8">
+                            <h2 class="news__title">News and Articles</h2>
+                        </div>
+                        <div class="col-sm-4 d-flex justify-content-sm-end align-items-end">
+                            <a class="news__btn h4 color-primary-grey p-0" href="#">See All</a>
+                        </div>
+                    </div>
+                    <div class="row news__content">
+                        <div class="col-lg-3 col-md-6 col-sm-12 news__box">
+                            <img class="news__box-img" src="img/news-1.jpg" alt="image">
+                            <a class="news__box-categories text-white" href="#">Awards</a>
+                            <a class="news__box-title h4 d-block mb-1">The National Book Award longlists</a>
+                            <span class="news__box-date">| September 21, 2020</span>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 news__box">
+                            <img class="news__box-img" src="img/news-2.jpg" alt="image">
+                            <a class="news__box-categories text-white" href="#">Editors` Picks</a>
+                            <a class="news__box-title h4 d-block mb-1">Weekend reading</a>
+                            <span class="news__box-date">| September 21, 2020</span>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 news__box">
+                            <img class="news__box-img" src="img/news-3.jpg" alt="image">
+                            <a class="news__box-categories text-white" href="#">Interview</a>
+                            <a class="news__box-title h4 d-block mb-1">The National Book Award longlists</a>
+                            <span class="news__box-date">| September 21, 2020</span>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 news__box">
+                            <img class="news__box-img" src="img/news-4.jpg" alt="image">
+                            <a class="news__box-categories text-white" href="#">Awards</a>
+                            <a class="news__box-title h4 d-block mb-1">The best history books of September</a>
+                            <span class="news__box-date">| September 21, 2020</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="products section-primary section-overflow">
+                <div class="container-xxl">
+                    <h2 class="products__title h2">Related Books</h2>
+                    <div class="products__slider">
+                        <div class="products__item">
+                            <a class="products__link d-block" href="#">
+                                <img class="products__img" src="./img/products-11.jpg" alt="image">
+                            </a>
+                            <a class="products__product-title d-block h4" href="#">The Fated Sky: A Lady Astronaut Novel</a>
+                            <p class="products__description">Mary Robinette Kowal</p>
+                            <div class="products__price-rating d-flex justify-content-between align-items-center flex-wrap">
+                                <p class="products__price price">
+                                    $3.00
+                                </p>
+                                <div class="products__star">
+                                    <div class="products__star-rating">
+                                        <span class="active"></span>
+                                        <span class="active"></span>
+                                        <span class="active"></span>
+                                        <span class="active"></span>
+                                        <span></span>
+                                      </div>
+                                </div>
+                            </div>
+                            <div class="products__bottom">
+                                <a class="products__btn btn btn-main" href="#">Add to Cart</a>
+                                <button class="products__wishlist">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="18" viewBox="0 0 14 18" fill="">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7 14L14 18V2C14 0.895431 13.1046 0 12 0H2C0.895431 0 0 0.89543 0 2V18L7 14ZM1 16.2768L7 12.8482L13 16.2768V2C13 1.44772 12.5523 1 12 1H2C1.44772 1 1 1.44772 1 2V16.2768Z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="products__badge popular">Popular</div>
+                        </div>
+                        <div class="products__item">
+                            <a class="products__link d-block" href="#">
+                                <img class="products__img" src="./img/products-12.jpg" alt="image">
+                            </a>
+                            <a class="products__product-title d-block h4" href="#">Glamour in Glass (Glamourist Histories...</a>
+                            <p class="products__description">Mary Robinette Kowal</p>
+                            <div class="products__price-rating d-flex justify-content-between align-items-center flex-wrap">
+                                <p class="products__price price">
+                                    $20.00
+                                </p>
+                                <div class="products__star">
+                                    <div class="products__star-rating">
+                                        <span class="active"></span>
+                                        <span class="active"></span>
+                                        <span class="active"></span>
+                                        <span class="active"></span>
+                                        <span></span>
+                                      </div>
+                                </div>
+                            </div>
+                            <div class="products__bottom">
+                                <a class="products__btn btn btn-main" href="#">Add to Cart</a>
+                                <button class="products__wishlist">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="18" viewBox="0 0 14 18" fill="">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7 14L14 18V2C14 0.895431 13.1046 0 12 0H2C0.895431 0 0 0.89543 0 2V18L7 14ZM1 16.2768L7 12.8482L13 16.2768V2C13 1.44772 12.5523 1 12 1H2C1.44772 1 1 1.44772 1 2V16.2768Z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="products__badge popular">Popular</div>
+                        </div>
+                        <div class="products__item">
+                            <a class="products__link d-block" href="#">
+                                <img class="products__img" src="./img/products-13.jpg" alt="image">
+                            </a>
+                            <a class="products__product-title d-block h4" href="#">In an Absent Dream (Wayward Children...</a>
+                            <p class="products__description">Seanan McGuire</p>
+                            <div class="products__price-rating d-flex justify-content-between align-items-center flex-wrap">
+                                <p class="products__price price">
+                                    $14.00
+                                </p>
+                                <div class="products__star">
+                                    <div class="products__star-rating">
+                                        <span class="active"></span>
+                                        <span class="active"></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                      </div>
+                                </div>
+                            </div>
+                            <div class="products__bottom">
+                                <a class="products__btn btn btn-main" href="#">Add to Cart</a>
+                                <button class="products__wishlist">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="18" viewBox="0 0 14 18" fill="">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7 14L14 18V2C14 0.895431 13.1046 0 12 0H2C0.895431 0 0 0.89543 0 2V18L7 14ZM1 16.2768L7 12.8482L13 16.2768V2C13 1.44772 12.5523 1 12 1H2C1.44772 1 1 1.44772 1 2V16.2768Z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="products__badge popular">Popular</div>
+                        </div>
+                        <div class="products__item">
+                            <a class="products__link d-block" href="#">
+                                <img class="products__img" src="./img/products-14.jpg" alt="image">
+                            </a>
+                            <a class="products__product-title d-block h4" href="#">Good Vibes, Good Life: How Self-Love Is the...</a>
+                            <p class="products__description">Vex King</p>
+                            <div class="products__price-rating d-flex justify-content-between align-items-center flex-wrap">
+                                <p class="products__price price">
+                                    $31.00
+                                </p>
+                                <div class="products__star">
+                                    <div class="products__star-rating">
+                                        <span class="active"></span>
+                                        <span class="active"></span>
+                                        <span class="active"></span>
+                                        <span class="active"></span>
+                                        <span></span>
+                                      </div>
+                                </div>
+                            </div>
+                            <div class="products__bottom">
+                                <a class="products__btn btn btn-main" href="#">Add to Cart</a>
+                                <button class="products__wishlist">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="18" viewBox="0 0 14 18" fill="">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7 14L14 18V2C14 0.895431 13.1046 0 12 0H2C0.895431 0 0 0.89543 0 2V18L7 14ZM1 16.2768L7 12.8482L13 16.2768V2C13 1.44772 12.5523 1 12 1H2C1.44772 1 1 1.44772 1 2V16.2768Z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="products__badge popular">Popular</div>
+                        </div>
+                        <div class="products__item">
+                            <a class="products__link d-block" href="#">
+                                <img class="products__img" src="./img/products-15.jpg" alt="image">
+                            </a>
+                            <a class="products__product-title d-block h4" href="#">Get Out of Your Own Way: Overcoming... </a>
+                            <p class="products__description">Mark Goulston</p>
+                            <div class="products__price-rating d-flex justify-content-between align-items-center flex-wrap">
+                                <p class="products__price price">
+                                    $12.40
+                                </p>
+                                <div class="products__star">
+                                    <div class="products__star-rating">
+                                        <span class="active"></span>
+                                        <span class="active"></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                      </div>
+                                </div>
+                            </div>
+                            <div class="products__bottom">
+                                <a class="products__btn btn btn-main" href="#">Add to Cart</a>
+                                <button class="products__wishlist">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="18" viewBox="0 0 14 18" fill="">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7 14L14 18V2C14 0.895431 13.1046 0 12 0H2C0.895431 0 0 0.89543 0 2V18L7 14ZM1 16.2768L7 12.8482L13 16.2768V2C13 1.44772 12.5523 1 12 1H2C1.44772 1 1 1.44772 1 2V16.2768Z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="products__badge popular">Popular</div>
+                        </div>
+                        <div class="products__item">
+                            <a class="products__link d-block" href="#">
+                                <img class="products__img" src="./img/products-14.jpg" alt="image">
+                            </a>
+                            <a class="products__product-title d-block h4" href="#">The Fated Sky: A Lady Astronaut Novel</a>
+                            <p class="products__description">Mary Robinette Kowal</p>
+                            <div class="products__price-rating d-flex justify-content-between align-items-center flex-wrap">
+                                <p class="products__price price">
+                                    $3.00
+                                </p>
+                                <div class="products__star">
+                                    <div class="products__star-rating">
+                                        <span class="active"></span>
+                                        <span class="active"></span>
+                                        <span class="active"></span>
+                                        <span class="active"></span>
+                                        <span></span>
+                                      </div>
+                                </div>
+                            </div>
+                            <div class="products__bottom">
+                                <a class="products__btn btn btn-main" href="#">Add to Cart</a>
+                                <button class="products__wishlist">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="18" viewBox="0 0 14 18" fill="">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7 14L14 18V2C14 0.895431 13.1046 0 12 0H2C0.895431 0 0 0.89543 0 2V18L7 14ZM1 16.2768L7 12.8482L13 16.2768V2C13 1.44772 12.5523 1 12 1H2C1.44772 1 1 1.44772 1 2V16.2768Z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="products__badge popular">Popular</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer bg-primary-dark">
+            <div class="container-xxl">
+                <div class="footer__wrapper row">
+                    <div class="footer__popular col-lg-3 col-md-4 col-sm-12">
+                        <h2 class="footer__title h4 text-white">Popular Categories</h2>
+                        <ul class="footer__list p-0">
+                            <li class="footer__item list-unstyled">
+                                <a class="footer__link" href="#">Business & Money</a>
+                            </li>
+                            <li class="footer__item list-unstyled">
+                                <a class="footer__link" href="#">Children's Books</a>
+                            </li>
+                            <li class="footer__item list-unstyled">
+                                <a class="footer__link" href="#">Computers & Technology</a>
+                            </li>
+                            <li class="footer__item list-unstyled">
+                                <a class="footer__link" href="#">Cookbooks, Food & Wine</a>
+                            </li>
+                            <li class="footer__item list-unstyled">
+                                <a class="footer__link" href="#">Crafts, Hobbies & Home</a>
+                            </li>
+                            <li class="footer__item list-unstyled">
+                                <a class="footer__link" href="#">Education & Teaching</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__customer col-lg-3 col-md-4 col-sm-6">
+                        <h2 class="footer__title h4 text-white">Customer service</h2>
+                        <ul class="footer__list p-0">
+                            <li class="footer__item list-unstyled">
+                                <a class="footer__link" href="#">Help</a>
+                            </li>
+                            <li class="footer__item list-unstyled">
+                                <a class="footer__link" href="#">FAQ</a>
+                            </li>
+                            <li class="footer__item list-unstyled">
+                                <a class="footer__link" href="#">Secure payment</a>
+                            </li>
+                            <li class="footer__item list-unstyled">
+                                <a class="footer__link" href="#">Delivery</a>
+                            </li>
+                            <li class="footer__item list-unstyled">
+                                <a class="footer__link" href="#">Returns & refunds</a>
+                            </li>
+                            <li class="footer__item list-unstyled">
+                                <a class="footer__link" href="#">Contact us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__social col-lg-2 col-md-4 col-sm-6">
+                        <h2 class="footer__title h4 text-white">Follow us</h2>
+                        <ul class="footer__list p-0">
+                            <li class="footer__item list-unstyled">
+                                <a class="footer__link" href="#">Instagram</a>
+                            </li>
+                            <li class="footer__item list-unstyled">
+                                <a class="footer__link" href="#">Facebook</a>
+                            </li>
+                            <li class="footer__item list-unstyled">
+                                <a class="footer__link" href="#">Twitter</a>
+                            </li>
+                            <li class="footer__item list-unstyled">
+                                <a class="footer__link" href="#">Pinterest</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__subscribe col-lg-4 col-md-12">
+                        <h2 class="footer__title h4 text-white">Subscribe to our Newsletter</h2>
+                        <p class="footer__subtitle">No spam, we promise</p>
+                        <form class="footer__form d-flex w-100" action="#">
+                            <input class="footer__input" type="email" placeholder="example@mail.com">
+                            <button class="footer__btn btn btn-main" type="submit">Subscribe</button>
+                        </form>
+                        <p class="footer__text">Calls are free of charge</p>
+                        <a class="footer__phone" href="tel:+0800600505">0-800-600-505</a>
+                        <p class="footer__text">Working hours from 09:00 to 18:00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="container-xxl">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-12">
+                            <p class="footer__copyright">Copyright © 2020 Crocoblock, Inc. All rights reserved</p>
+                        </div>
+                        <div class="col-md-4 col-sm-12 d-flex justify-content-md-end ">
+                            <ul class="footer__bottom-list d-flex m-0 p-0">
+                                <li class="footer__bottom-item list-unstyled">
+                                    <a href="#" class="footer__bottom-link">Privacy Policy</a>
+                                </li>
+                                <li class="footer__bottom-item list-unstyled">
+                                    <a href="#" class="footer__bottom-link">Terms</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
