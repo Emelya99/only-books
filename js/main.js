@@ -6,8 +6,8 @@ $(function () {
         autoplay: false,
         speed: 500,
         pauseOnHover: false,
-        nextArrow: '<img class="arrow-next" src="../img/next.svg" alt="icon">',
-        prevArrow: '<img class="arrow-prev" src="../img/prev.svg" alt="icon">',
+        nextArrow: '<img class="arrow-next" src="./img/next.svg" alt="icon">',
+        prevArrow: '<img class="arrow-prev" src="./img/prev.svg" alt="icon">',
         responsive: [
             {
                 breakpoint: 1201,
